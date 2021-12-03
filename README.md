@@ -5,6 +5,5 @@ A utility that allows you to convert FFT measurements from [MobileTools](https:/
 ## Usage
 
 ```
-npm install
-npm start -- input.txt output.csv
+npx mobiletools2autoeq input.txt output.csv
 ```
