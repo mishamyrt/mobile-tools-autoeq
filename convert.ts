@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { parse } from './modules/mobile-tools'
 import { readFile, writeFile } from 'fs/promises'
 import { normalizeGain } from './modules/audio'

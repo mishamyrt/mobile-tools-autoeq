@@ -1,16 +1,17 @@
 {
-  "name": "mobile-tools-autoeq",
-  "version": "1.0.0",
-  "description": "",
-  "main": "convert.js",
+  "name": "mobiletools2autoeq",
+  "version": "1.0.1",
+  "description": "Audio measurements converter",
+  "bin": "dist/convert.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
-    "start": "npx ts-node convert.ts"
+    "build": "npx tsc && chmod +x dist/convert.js",
+    "start": "npx ts-node convert.ts",
+    "prepublish": "npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "mishamyrt",
+  "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
