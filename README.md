@@ -1,4 +1,4 @@
-# MobileTools to AutoEQ converter
+# MobileTools to AutoEQ converter [![Quality assurance](https://github.com/mishamyrt/mobiletools2autoeq/actions/workflows/qa.yaml/badge.svg)](https://github.com/mishamyrt/mobiletools2autoeq/actions/workflows/qa.yaml)
 
 A utility that allows you to convert FFT measurements from [MobileTools](https://apps.apple.com/ru/app/mobile-tools-by-audiocontrol/id1321129383) into a format that [AutoEQ](https://github.com/jaakkopasanen/AutoEq) understands. It is worth calibrating the speakers to get a smooth amplitude-frequency response.
 
