@@ -1,6 +1,6 @@
 # MobileTools to AutoEQ converter
 
-A utility that allows you to convert FFT measurements from [MobileTools](https://apps.apple.com/ru/app/mobile-tools-by-audiocontrol/id1321129383) into a format that [AutoEQ](https://github.com/jaakkopasanen/AutoEq) understands.
+A utility that allows you to convert FFT measurements from [MobileTools](https://apps.apple.com/ru/app/mobile-tools-by-audiocontrol/id1321129383) into a format that [AutoEQ](https://github.com/jaakkopasanen/AutoEq) understands. It is worth calibrating the speakers to get a smooth amplitude-frequency response.
 
 ## Usage
 
@@ -8,9 +8,8 @@ A utility that allows you to convert FFT measurements from [MobileTools](https:/
 npx mobiletools2autoeq input.txt output.csv
 ```
 
-## Why?
-
-It is worth calibrating the speakers to get a smooth amplitude-frequency response. I suggest using a combination of the following:
+## Correction
+I suggest using a combination of the following:
 
 1. [MobileTools](https://apps.apple.com/ru/app/mobile-tools-by-audiocontrol/id1321129383) — iOS app that uses calibrated microphone profiles to record FFT.
 2. [mobiletools2autoeq](https://github.com/mishamyrt/mobiletools2autoeq) — This utility that converts measurements from MobileTools format into a format that AutoEQ understands.
@@ -26,3 +25,5 @@ python3 autoeq.py
   --equalize \
   --parametric_eq
 ```
+
+You can then use the resulting file located in the `output/* ParametricEQ.txt` folder in any supported application or plug-in. I use [SoundSource](https://rogueamoeba.com/soundsource/) on macOS.
