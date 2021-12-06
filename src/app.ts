@@ -4,16 +4,19 @@ import { readFile, writeFile } from 'fs/promises'
 import { normalizeGain } from './modules/audio'
 import { formatMeasurement } from './modules/autoeq'
 
-if (process.argv.length < 4) {
-  console.error('Too few arguments')
-  process.exit(1)
+function main (args: string[]) {
+  if (args.length < 2) {
+    console.error('Too few arguments')
+    process.exit(1)
+  }
+  const inputPath = args[0]
+  const outputPath = args[1]
+
+  return readFile(inputPath, { encoding: 'utf8' })
+    .then(parse)
+    .then(normalizeGain)
+    .then(formatMeasurement)
+    .then(csv => writeFile(outputPath, csv))
 }
 
-const inputPath = process.argv[2]
-const outputPath = process.argv[3]
-
-readFile(inputPath, { encoding: 'utf8' })
-  .then(parse)
-  .then(normalizeGain)
-  .then(formatMeasurement)
-  .then(csv => writeFile(outputPath, csv))
+main(process.argv.slice(2))
